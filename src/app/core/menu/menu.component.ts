@@ -2,7 +2,7 @@ import { Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@
 
 import { MenuService } from './menu.service';
 import { Subscription } from 'rxjs';
-import {TranslateService} from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-menu',
@@ -28,17 +28,17 @@ export class MenuComponent implements OnChanges, OnInit, OnDestroy {
   constructor(
     public translate: TranslateService,
     public menuService: MenuService
-  ) {}
+  ) { }
 
   ngOnChanges(changes: SimpleChanges) {
-    this.config = {...this.config, rtlLayout: this.direction === 'rtl' ? true : false};
+    this.config = { ...this.config, rtlLayout: this.direction === 'rtl' ? true : false };
   }
 
   ngOnInit() {
-    const menu =  this.menuService.getAll();
+    const menu = this.menuService.getAll();
     this.menuItems = menu;
 
-    this.langChangeSubscription = this.translate.onLangChange.subscribe( () => {
+    this.langChangeSubscription = this.translate.onLangChange.subscribe(() => {
       const updatedMenu = this.menuService.getAll();
       this.menuItems = updatedMenu;
     });
