@@ -1,3 +1,4 @@
+import { VideoComponent } from './video/video.component';
 import { Routes } from '@angular/router';
 
 import { DashboardComponent } from './dashboard.component';
