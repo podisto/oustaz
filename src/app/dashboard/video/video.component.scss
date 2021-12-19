@@ -6,3 +6,8 @@
   background-image: url("/assets/images/podisto.fw.png");
   background-size: cover;
 }
+
+mat-card img {
+  object-fit: cover;
+  height: 80%;
+}
