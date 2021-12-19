@@ -19,7 +19,7 @@ body {
     .mat-card-title {
       line-height: 1;
       font-size: 16px;
-      font-weight: 400;
+      font-weight: bold;
     }
 
     .mat-card-subtitle {
@@ -28,7 +28,7 @@ body {
     }
 
     .content-full,
-    >hr {
+    > hr {
       @include media-breakpoint-up(sm) {
         width: calc(100% + 32px);
         margin: 0 -16px 16px -16px;
@@ -55,7 +55,7 @@ body {
 
       .material-icons {
         font-size: 40px;
-        opacity: .2;
+        opacity: 0.2;
         transform: rotate(-5deg);
       }
     }

@@ -15,6 +15,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgModule } from '@angular/core';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { RouterModule } from '@angular/router';
+import { VideoComponent } from './video/video.component';
 
 @NgModule({
   imports: [
@@ -30,6 +31,9 @@ import { RouterModule } from '@angular/router';
     NgxDatatableModule,
     FlexLayoutModule
   ],
-  declarations: [DashboardComponent]
+  declarations: [
+    DashboardComponent,
+    VideoComponent
+  ]
 })
-export class DashboardModule {}
+export class DashboardModule { }
